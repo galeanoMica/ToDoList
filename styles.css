@@ -8,8 +8,8 @@
 main {
   background-image: linear-gradient(
     109.6deg,
-    rgba(153, 255, 221, 0.637) 11.2%,
-    rgba(203, 126, 255, 0.445) 100.2%
+    rgba(0, 0, 0, 0.884) 11.2%,
+    rgba(0, 34, 128, 0.644) 100.2%
   );
   width: 100vw;
   height: 100vh;
@@ -29,7 +29,7 @@ form {
 .mainCard {
   width: 40vw;
   border-radius: 25px;
-  background-color: rgba(255, 255, 255, 0.986);
+  background-color: rgba(252, 241, 241, 0.986);
   padding: 25px;
 }
 

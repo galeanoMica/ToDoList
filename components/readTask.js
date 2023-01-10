@@ -12,7 +12,7 @@ export const displayTasks = () => {
     const dates = uniqueDate(taskList);
     orderDates(dates);
     
-    dates.forEach(date => {
+    dates.forEach((date) => {
         
         const dateMoment = moment(date, "DD/MM/YYYY");
         list.appendChild(dateElement(date));
@@ -21,7 +21,7 @@ export const displayTasks = () => {
             const diff = dateMoment.diff(taskDate);
             
 
-            if (diff == 0){
+            if (diff === 0){
                 list.appendChild(createTask(task));
             };
            

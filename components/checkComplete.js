@@ -13,7 +13,7 @@ const completeTask = (event,id) => {
     element.classList.toggle("far");
 
     const tasks = JSON.parse(localStorage.getItem("tasks"));
-    const index = tasks.findIndex( item => item.id == id );
+    const index = tasks.findIndex( (item) => item.id === id );
     
     tasks[index]["complete"] = !tasks[index]["complete"];
     localStorage.setItem("tasks", JSON.stringify(tasks));

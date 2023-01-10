@@ -1,4 +1,4 @@
-import { uniqueDate } from "../services/date.js";
+
 import checkComplete from "./checkComplete.js";
 import deleteIcon from "./deleteIcon.js";
 import { displayTasks } from "./readTask.js";
@@ -18,9 +18,9 @@ export const addTask = (evento) => {
     
     const dateformat = moment(date).format("DD/MM/YYYY");
     
-    if(value == "" || date == "") {
+    if(value === "" || date === "") {
        return;
-    };
+    }
     
     input.value = '';
     calendar.value = '';
@@ -31,7 +31,7 @@ export const addTask = (evento) => {
         value,
         dateformat,
         complete,
-        id: uuid.v4()
+        id: uuid.v4(),
     };
 
     list.innerHTML = "";
@@ -60,9 +60,9 @@ export const createTask = ({value, dateformat, complete, id}) => {
 
     const check = checkComplete(id);
 
-    console.log(complete);
+    
     if(complete) {
-        console.log("completar");
+        
         check.classList.toggle("fas");
         check.classList.toggle("completeIcon");
         check.classList.toggle("far");
@@ -77,11 +77,10 @@ export const createTask = ({value, dateformat, complete, id}) => {
 
     
     //task.innerHTML = content;
-    const dateElement = document.createElement("span");
-    dateElement.innerHTML = dateformat;
+    
     
     task.appendChild(taskContent);
-    task.appendChild(dateElement);
+    
     task.appendChild(deleteIcon());
     
     return task;
